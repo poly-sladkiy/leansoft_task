@@ -1,4 +1,5 @@
 ﻿using PersonSerialization.Models;
+using PersonSerialization.Models.Results;
 
 namespace PersonSerialization.Repository;
 
@@ -55,4 +56,23 @@ public static class PersonRepository
 
 		return age;
 	}
+
+	/// <summary>
+	/// Calculate statistic
+	/// </summary>
+	/// <param name="persons"></param>
+	/// <returns></returns>
+	public static PersonStatistic CalculatePersonStatistic(List<Person> persons)
+	{
+		var personsCount = persons.Count;
+		var creditCardCount = persons.SelectMany(p => p.CreditCardNumbers).Count();
+		var averageChildAge = persons.SelectMany(p => p.Children).Average(c => CalculateAgeFromUnixTimestamp(c.BirthDate));
+
+		return new PersonStatistic(
+			personsCount: personsCount,
+			creditCardCount: creditCardCount,
+			averageChildAge: averageChildAge
+		);
+	}
+
 }
