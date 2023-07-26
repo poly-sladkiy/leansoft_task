@@ -42,4 +42,17 @@ public static class PersonRepository
 		return persons;
 	}
 
+	/// <summary>
+	/// Calculate person age from unix time 
+	/// </summary>
+	/// <param name="unixTimestamp"></param>
+	/// <returns></returns>
+	public static int CalculateAgeFromUnixTimestamp(long unixTimestamp)
+	{
+		var birthDate = DateTimeOffset.FromUnixTimeSeconds(unixTimestamp);
+		var age = DateTimeOffset.UtcNow.Year - birthDate.Year;
+		if (DateTimeOffset.UtcNow < birthDate.AddYears(age)) age--;
+
+		return age;
+	}
 }
