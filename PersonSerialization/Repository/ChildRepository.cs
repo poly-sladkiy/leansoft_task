@@ -2,8 +2,15 @@
 
 namespace PersonSerialization.Repository;
 
+/// <summary>
+/// Child repository
+/// </summary>
 public static class ChildRepository
 {
+	/// <summary>
+	/// Generate random child
+	/// </summary>
+	/// <returns></returns>
 	public static Child GenerateRandomChild()
 	{
 		var random = new Random();
