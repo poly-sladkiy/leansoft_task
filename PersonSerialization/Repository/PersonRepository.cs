@@ -2,8 +2,16 @@
 
 namespace PersonSerialization.Repository;
 
+/// <summary>
+/// Person repository
+/// </summary>
 public static class PersonRepository
 {
+	/// <summary>
+	/// Generate random persons with provided count
+	/// </summary>
+	/// <param name="count"></param>
+	/// <returns></returns>
 	public static List<Person> GenerateRandomPersons(int count)
 	{
 		var random = new Random();
