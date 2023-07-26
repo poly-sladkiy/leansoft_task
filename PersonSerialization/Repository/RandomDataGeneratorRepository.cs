@@ -20,7 +20,7 @@ public class RandomDataGeneratorRepository
 	/// </summary>
 	/// <param name="length"></param>
 	/// <returns></returns>
-	private static string GenerateRandomDigits(int length)
+	public static string GenerateRandomDigits(int length)
 	{
 		var random = new Random();
 		const string chars = "0123456789";
