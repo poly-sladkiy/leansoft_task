@@ -3,7 +3,7 @@
 /// <summary>
 /// Child class
 /// </summary>
-class Child
+public class Child
 {
 	/// <summary>
 	/// Id
