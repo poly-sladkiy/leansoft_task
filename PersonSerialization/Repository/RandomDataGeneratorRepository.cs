@@ -3,7 +3,7 @@
 /// <summary>
 /// Contains various data generators 
 /// </summary>
-public class RandomDataGeneratorRepository
+public static class RandomDataGeneratorRepository
 {
 	/// <summary>
 	/// Generate random credit card number
