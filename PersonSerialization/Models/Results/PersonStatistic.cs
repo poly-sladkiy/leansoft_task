@@ -3,11 +3,11 @@
 /// <summary>
 /// Persons statistic
 /// </summary>
-/// <param name="personCount"></param>
-/// <param name="creditCountCount"></param>
-/// <param name="avarageChildAge"></param>
+/// <param name="personsCount"></param>
+/// <param name="creditCardCount"></param>
+/// <param name="averageChildAge"></param>
 public record PersonStatistic(
-	int personCount,
-	int creditCountCount,
-	double avarageChildAge
+	int personsCount,
+	int creditCardCount,
+	double averageChildAge
 );
