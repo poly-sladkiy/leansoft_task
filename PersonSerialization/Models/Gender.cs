@@ -3,7 +3,7 @@
 /// <summary>
 /// Gender
 /// </summary>
-enum Gender
+public enum Gender
 {
 	/// <summary>
 	/// Male
