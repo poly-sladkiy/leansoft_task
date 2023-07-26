@@ -10,7 +10,7 @@ public class FileService
 	/// </summary>
 	/// <param name="filePath"></param>
 	/// <param name="content"></param>
-	static void WriteToFile(string filePath, string content)
+	public static void WriteToFile(string filePath, string content)
 	{
 		File.WriteAllText(filePath, content);
 	}
@@ -20,7 +20,7 @@ public class FileService
 	/// </summary>
 	/// <param name="filePath"></param>
 	/// <returns></returns>
-	static string ReadFromFile(string filePath)
+	public static string ReadFromFile(string filePath)
 	{
 		return File.ReadAllText(filePath);
 	}
